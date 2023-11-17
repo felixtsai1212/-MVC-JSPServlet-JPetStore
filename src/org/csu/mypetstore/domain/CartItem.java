@@ -54,4 +54,9 @@ public class CartItem implements Serializable {
     }
   }
 
+  public void setCartId(int cart_id) {
+  }
+
+    public void setItemId(String itemId) {
+    }
 }

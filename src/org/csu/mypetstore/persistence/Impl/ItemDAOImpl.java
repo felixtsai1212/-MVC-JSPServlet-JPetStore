@@ -38,7 +38,7 @@ public class ItemDAOImpl implements ItemDAO {
             pStatement.setInt(1, increment.intValue());
             pStatement.setString(2, itemId);
             pStatement.executeUpdate();
-            DBUtil.closePreparedStatent(pStatement);
+            DBUtil.closePreparedStatement(pStatement);
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();
@@ -57,7 +57,7 @@ public class ItemDAOImpl implements ItemDAO {
                 result = resultSet.getInt(1);
             }
             DBUtil.closeResultSet(resultSet);
-            DBUtil.closePreparedStatent(pStatement);
+            DBUtil.closePreparedStatement(pStatement);
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();

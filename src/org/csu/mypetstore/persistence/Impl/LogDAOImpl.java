@@ -5,7 +5,6 @@ import org.csu.mypetstore.persistence.LogDAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.util.function.DoubleBinaryOperator;
 
 public class LogDAOImpl implements LogDAO {
 

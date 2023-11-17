@@ -123,7 +123,7 @@ public class OrderDAOImpl implements OrderDAO {
                 orderList.add(order);
             }
             DBUtil.closeResultSet(resultSet);
-            DBUtil.closePreparedStatent(preparedStatement);
+            DBUtil.closePreparedStatement();
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();
@@ -170,7 +170,7 @@ public class OrderDAOImpl implements OrderDAO {
                 order.setStatus(resultSet.getString(26));
             }
             DBUtil.closeResultSet(resultSet);
-            DBUtil.closePreparedStatent(preparedStatement);
+            DBUtil.closePreparedStatement();
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();
@@ -210,7 +210,7 @@ public class OrderDAOImpl implements OrderDAO {
             preparedStatement.setString(25, order.getLocale());
 
             preparedStatement.executeUpdate();
-            DBUtil.closePreparedStatent(preparedStatement);
+            DBUtil.closePreparedStatement();
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();
@@ -228,7 +228,7 @@ public class OrderDAOImpl implements OrderDAO {
             preparedStatement.setString(4, order.getStatus());
 
             preparedStatement.executeUpdate();
-            DBUtil.closePreparedStatent(preparedStatement);
+            DBUtil.closePreparedStatement();
             DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();

@@ -1,8 +1,6 @@
 package org.csu.mypetstore.web.servlets;
 
 import org.csu.mypetstore.domain.Account;
-import org.csu.mypetstore.domain.Log;
-import org.csu.mypetstore.service.AccountService;
 import org.csu.mypetstore.service.LogService;
 
 import javax.servlet.ServletException;
@@ -25,10 +23,10 @@ public class SignOnFormServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        account = (Account)session.getAttribute("account");
+        account = (Account) session.getAttribute("account");
 
-        if(account != null){
-            HttpServletRequest httpRequest= request;
+        if (account != null) {
+            HttpServletRequest httpRequest = request;
             String strBackUrl = "http://" + request.getServerName() + ":" + request.getServerPort()
                     + httpRequest.getContextPath() + httpRequest.getServletPath() + "?" + (httpRequest.getQueryString());
 
@@ -40,3 +38,5 @@ public class SignOnFormServlet extends HttpServlet {
         request.getRequestDispatcher(SIGNONFORM).forward(request, response);
     }
 }
+
+

@@ -82,4 +82,21 @@ public class Cart implements Serializable {
     return subTotal;
   }
 
+  public int getQuantityByItemId(String itemId) {
+    CartItem cartItem = itemMap.get(itemId);
+    return (cartItem != null) ? cartItem.getQuantity() : 0;
+  }
+
+  public void addItem(CartItem cartItem) {
+  }
+
+    public CartItem getCartItem(String itemId) {
+      return null;
+    }
+
+  public void addCartItem(CartItem cartItem) {
+  }
+
+  public void removeCartItem(String itemId) {
+  }
 }
